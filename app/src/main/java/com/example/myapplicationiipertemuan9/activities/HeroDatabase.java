@@ -1,4 +1,7 @@
-package com.example.myapplicationiipertemuan9;
+package com.example.myapplicationiipertemuan9.activities;
+
+import com.example.myapplicationiipertemuan9.R;
+import com.example.myapplicationiipertemuan9.activities.Hero;
 
 import java.util.*;
 

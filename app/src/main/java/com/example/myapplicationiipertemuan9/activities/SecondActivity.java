@@ -1,4 +1,4 @@
-package com.example.myapplicationiipertemuan9;
+package com.example.myapplicationiipertemuan9.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,12 +8,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.myapplicationiipertemuan9.R;
 
 public class SecondActivity extends AppCompatActivity {
     ImageView ImagePhoto;
-    private  Hero models = new Hero();
+    private Hero models = new Hero();
     TextView Details;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

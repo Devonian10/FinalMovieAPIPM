@@ -1,7 +1,5 @@
-package com.example.myapplicationiipertemuan9;
+package com.example.myapplicationiipertemuan9.adapters;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +8,10 @@ import android.widget.TextView;
 import android.widget.*;
 import java.util.*;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplicationiipertemuan9.R;
+import com.example.myapplicationiipertemuan9.activities.Hero;
 
 public class HeroRecyclerAdapter extends RecyclerView.Adapter<HeroRecyclerAdapter.ViewHolder> {
 

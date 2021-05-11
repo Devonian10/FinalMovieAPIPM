@@ -1,4 +1,4 @@
-package com.example.myapplicationiipertemuan9;
+package com.example.myapplicationiipertemuan9.activities;
 
 public class Hero {
 

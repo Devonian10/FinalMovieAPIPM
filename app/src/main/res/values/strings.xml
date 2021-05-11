@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">My Application Fragment Navigation Bar</string>
     <string name="title_activity_home_fragment">MainActivity</string>
-    <string name="title_home">Characters</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Search</string>
+    <string name="title_home">NowPlaying</string>
+    <string name="title_dashboard">Popular</string>
+    <string name="title_notifications">Upcoming</string>
+    <string name="title_TvShow">TvShow</string>
+    <string name="menu_now_playing">Now Playing</string>
+    <string name="menu_popular">Popular</string>
+    <string name="menu_upcoming">Upcoming</string>
+    <string name="menu_Tvshow">TvShow</string>
 </resources>

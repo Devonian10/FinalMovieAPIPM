@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplicationiipertemuan9">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationIIPertemuan9">
+        <activity android:name=".activities.DetailTvShowActivity"></activity>
         <activity
-            android:name=".HomeFragment"
-            android:label="@string/title_activity_home_fragment"></activity>
-        <activity android:name=".SecondActivity"></activity>
-        <activity android:name=".MainActivity">
+            android:name=".fragments.HomeFragment"
+            android:label="@string/title_activity_home_fragment" />
+        <activity android:name=".activities.DetailActivity" />
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
