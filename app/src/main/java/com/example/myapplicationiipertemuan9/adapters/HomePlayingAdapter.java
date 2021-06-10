@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.*;
 
 import com.bumptech.glide.Glide;
 import com.example.myapplicationiipertemuan9.R;
+import com.example.myapplicationiipertemuan9.adapters.clicklistener.OnItemClickListener;
 import com.example.myapplicationiipertemuan9.models.HomePlaying;
+import com.example.myapplicationiipertemuan9.models.movie.Movie;
 import com.example.myapplicationiipertemuan9.network.Const;
 
 import java.util.*;
@@ -16,10 +18,13 @@ import java.util.*;
 public class HomePlayingAdapter extends RecyclerView.Adapter<HomePlayingAdapter.ViewHolder> {
     private List<HomePlaying> nowPlayings;
     private OnItemClick onItemClick;
-
+    private OnItemClickListener onClickListener;
     public HomePlayingAdapter(List<HomePlaying> nowPlayings, OnItemClick onItemClick) {
         this.nowPlayings = nowPlayings;
         this.onItemClick = onItemClick;
+    }
+    public void setClickListener(OnItemClickListener onClickListener){
+        this.onClickListener = onClickListener;
     }
 
     @NonNull
@@ -37,6 +42,11 @@ public class HomePlayingAdapter extends RecyclerView.Adapter<HomePlayingAdapter.
                 .into(viewHolder.ivPoster);
         viewHolder.tvTitle.setText(nowPlayings.get(i).getTitle());
     }
+    public void appendList(List<HomePlaying> listToAppend){
+        nowPlayings.addAll(listToAppend);
+        notifyDataSetChanged();
+    }
+
 
     @Override
     public int getItemCount() {

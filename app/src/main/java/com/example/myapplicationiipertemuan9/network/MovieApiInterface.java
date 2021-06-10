@@ -1,5 +1,6 @@
 package com.example.myapplicationiipertemuan9.network;
 
+import com.example.myapplicationiipertemuan9.models.HomePlaying;
 import com.example.myapplicationiipertemuan9.models.SearchResponse;
 import com.example.myapplicationiipertemuan9.models.DashboardResponse;
 import com.example.myapplicationiipertemuan9.models.HomePlayingResponse;
@@ -15,6 +16,12 @@ public interface MovieApiInterface {
     @GET("now_playing")
     Call<HomePlayingResponse> getNowPlaying(
             @Query("api_key") String apiKey
+    );
+    @GET("search/movie")
+    Call<HomePlayingResponse> search(
+            @Query("api key") String apikey,
+            @Query("query") String query,
+            @Query("page") int page
     );
     @GET("movie/{movie_id}")
     Call<Movie> getMovie(

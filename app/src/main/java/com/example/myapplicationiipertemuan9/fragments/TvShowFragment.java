@@ -6,11 +6,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.myapplicationiipertemuan9.R;
 import com.example.myapplicationiipertemuan9.activities.DetailActivity;
@@ -21,6 +23,7 @@ import com.example.myapplicationiipertemuan9.models.TvShowPlayingResponse;
 import com.example.myapplicationiipertemuan9.network.Const;
 import com.example.myapplicationiipertemuan9.network.TvShowApiClient;
 import com.example.myapplicationiipertemuan9.network.TvShowApiInterface;
+import com.example.myapplicationiipertemuan9.repository.TvShowRepository;
 
 import java.util.List;
 
@@ -34,6 +37,11 @@ public class TvShowFragment extends Fragment implements TvShowAdapter.OnItemClic
     private RecyclerView recyclerView;
     private TvShowAdapter tvShowadapter;
     private List<TvShowPlaying> tvShowPlayings;
+    private SwipeRefreshLayout refreshLayout;
+    private TvShowRepository repository;
+    private TextView tvError;
+    private boolean isFetching;
+    private int currentPage = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -76,7 +84,7 @@ public class TvShowFragment extends Fragment implements TvShowAdapter.OnItemClic
         Intent detailActivity = new Intent(getActivity(), DetailTvShowActivity.class);
         detailActivity.putExtra("ID", tvShowPlayings.get(pos).getId());
         detailActivity.putExtra("TITLE", tvShowPlayings.get(pos).getTitle());
-        detailActivity.putExtra("IMG_URL", tvShowPlayings.get(pos).getImgUrl());
+        detailActivity.putExtra("IMG_URL", tvShowPlayings.get(pos).getPosterPath2());
         startActivity(detailActivity);
     }
 }

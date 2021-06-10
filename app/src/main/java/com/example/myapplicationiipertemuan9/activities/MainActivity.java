@@ -9,9 +9,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplicationiipertemuan9.fragments.DashboardFragment;
 import com.example.myapplicationiipertemuan9.R;
+import com.example.myapplicationiipertemuan9.fragments.FavoriteFragment;
 import com.example.myapplicationiipertemuan9.fragments.SearchFragment;
 import com.example.myapplicationiipertemuan9.fragments.HomeFragment;
 import com.example.myapplicationiipertemuan9.fragments.TvShowFragment;
+import com.example.myapplicationiipertemuan9.models.Favorite;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -40,14 +42,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 getSupportActionBar().setTitle(getResources().getString(R.string.menu_Tvshow));
                 fragment = new TvShowFragment();
                 break;
-            case R.id.item_popular:
-                getSupportActionBar().setTitle(getResources().getString(R.string.menu_popular));
-                fragment = new DashboardFragment();
+            //case R.id.item_popular:
+                //getSupportActionBar().setTitle(getResources().getString(R.string.menu_popular));
+                //fragment = new DashboardFragment();
+                //break;
+            //case R.id.item_upcoming:
+                //getSupportActionBar().setTitle(getResources().getString(R.string.menu_upcoming));
+                //fragment = new SearchFragment();
+                //break;
+            case R.id.item_favorite:
+                getSupportActionBar().setTitle(getResources().getString(R.string.menu_Favorite));
+                fragment = new FavoriteFragment();
                 break;
-            case R.id.item_upcoming:
-                getSupportActionBar().setTitle(getResources().getString(R.string.menu_upcoming));
-                fragment = new SearchFragment();
-                break;
+
         }
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()

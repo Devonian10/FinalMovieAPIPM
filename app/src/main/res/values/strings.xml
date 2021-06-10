@@ -1,12 +1,23 @@
 <resources>
-    <string name="app_name">My Application Fragment Navigation Bar</string>
+    <string name="app_name">Final Project PM</string>
     <string name="title_activity_home_fragment">MainActivity</string>
     <string name="title_home">NowPlaying</string>
     <string name="title_dashboard">Popular</string>
     <string name="title_notifications">Upcoming</string>
     <string name="title_TvShow">TvShow</string>
     <string name="menu_now_playing">Now Playing</string>
+    <string name="menu_movie">Movie</string>
     <string name="menu_popular">Popular</string>
     <string name="menu_upcoming">Upcoming</string>
     <string name="menu_Tvshow">TvShow</string>
+    <string name="search">Search</string>
+    <string name="menu_Overview">Overview</string>
+    <string name="menu_Favorite">Favorite</string>
+    <string name="favorite_empty">Favorite is Empty</string>
+    <string name="title_season">Season</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_episodes">Episodes</string>
+    <string name="first_air_date">First Air Date</string>
+    <string name="Last_air_date">Last Air Date</string>
+    <string name="rate">Rate</string>
 </resources>

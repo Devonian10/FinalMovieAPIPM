@@ -18,8 +18,96 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
+        android:text="@string/menu_Tvshow"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:fontFamily="sans-serif-black"
         android:layout_below="@id/iv_poster" />
+
+    <TextView
+        android:id="@+id/label_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_Overview"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:layout_below="@id/tv_title"/>
+
+    <TextView
+        android:id="@+id/label_seasons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_poster"
+        android:layout_toRightOf="@id/label_overview"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/title_season"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginRight="15dp"/>
+    <TextView
+        android:id="@+id/label_episodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/label_seasons"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="15sp"
+        android:text="@string/title_episodes"
+        android:fontFamily="sans-serif-black"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/label_overview" />
+
+    <TextView
+        android:id="@+id/label_firstAirDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="70sp"
+        android:layout_toEndOf="@id/iv_poster"
+        android:layout_toTopOf="@id/label_seasons"
+        android:layout_toRightOf="@id/iv_poster"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/first_air_date"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="70sp"
+        android:layout_toEndOf="@id/label_firstAirDate"
+        android:layout_toTopOf="@id/label_episodes"
+        android:layout_toRightOf="@id/label_firstAirDate"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:text="@string/Last_air_date"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_poster"
+        android:layout_toRightOf="@id/iv_poster"
+        android:textSize="15sp"
+        android:text="@string/rate"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:layout_marginTop="130sp"
+        android:layout_marginLeft="20sp"/>
+
+    <RatingBar
+        android:id="@+id/rb_rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iv_poster"
+        android:layout_marginTop="150sp"
+        android:numStars="5"
+        android:stepSize="0.1"
+        android:layout_toRightOf="@id/iv_poster" />
 </RelativeLayout>

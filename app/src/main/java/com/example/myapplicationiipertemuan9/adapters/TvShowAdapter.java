@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.myapplicationiipertemuan9.R;
+import com.example.myapplicationiipertemuan9.adapters.clicklistener.OnItemClickListener;
 import com.example.myapplicationiipertemuan9.models.TvShowPlaying;
 import com.example.myapplicationiipertemuan9.network.Const;
 
@@ -19,12 +20,15 @@ import java.util.List;
 public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder> {
     private List<TvShowPlaying> tvPlaying;
     private OnItemClick onItemClick;
+    private OnItemClickListener clickListener;
 
     public TvShowAdapter(List<TvShowPlaying> tvPlaying, OnItemClick onItemClick) {
         this.tvPlaying = tvPlaying;
         this.onItemClick = onItemClick;
     }
-
+    public void setClickListener(OnItemClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -36,7 +40,7 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Glide.with(viewHolder.itemView.getContext())
-                .load(Const.IMG_URL_200 + tvPlaying.get(i).getImgUrl())
+                .load(Const.IMG_URL_200 + tvPlaying.get(i).getPosterPath2())
                 .into(viewHolder.ivPoster);
         viewHolder.tvTitle.setText(tvPlaying.get(i).getTitle());
     }

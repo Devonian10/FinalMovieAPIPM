@@ -11,14 +11,19 @@
         android:icon="@drawable/ic_baseline_live_tv_24"
         android:title="@string/menu_Tvshow"/>
 
-    <item
+    <!--<item
         android:id="@+id/item_popular"
         android:icon="@drawable/ic_baseline_star_24"
         android:title="@string/menu_popular" />
     <item
         android:id="@+id/item_upcoming"
         android:icon="@drawable/ic_baseline_navigate_next_24"
-        android:title="@string/menu_upcoming" />
+        android:title="@string/menu_upcoming" /-->
+
+    <item
+        android:id="@+id/item_favorite"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/menu_Favorite"/>
 
 
 </menu>

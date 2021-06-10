@@ -3,6 +3,7 @@ package com.example.myapplicationiipertemuan9.models;
 import com.google.gson.annotations.*;
 
 public class HomePlaying {
+    @SerializedName("id")
     private String id;
     private String title;
     private String overview;
